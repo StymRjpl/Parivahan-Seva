@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carcss/car.css') }}">
+    <script src ="{{ url_for('static', filename ='carcss/car.js') }}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src ="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1 class="animated-heading">Car Details</h1>
+    </div>
+    <div class="single_product">
+        <div class="container-fluid">
+            <div class="product_image_side">
+                <div class="row">
+                    <div class="col-md-5"> <img src="{{ url_for('static', filename='Satyam.jpg') }}" name="stage" width="400" height="400" />
+                        <form name="colorpicker"> <label class="silver"> <input type="radio" name="color" value="silver" onClick="display(this.form)">
+                                <div class="layer"></div>
+                                <div class="button"> <span></span> </div>
+                            </label> <label class="grey"> <input type="radio" name="color" value="grey" onClick="display(this.form)">
+                                <div class="layer"></div>
+                                <div class="button"> <span></span> </div>
+                            </label> <label class="red"> <input type="radio" name="color" value="red" onClick="display(this.form)">
+                                <div class="layer"></div>
+                                <div class="button"> <span></span> </div>
+                            </label> <label class="blue"> <input type="radio" name="color" value="blue" onClick="display(this.form)">
+                                <div class="layer"></div>
+                                <div class="button"> <span></span> </div>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="product_description text-left">
+                            <div class="product_name">Hyundai ELITE i20 Star Dust</div>
+                            
+                            <div class="mt-1"> <button class="btn btn-sm btn-outline-info">Rate this car</button> <button class="btn btn-sm btn-outline-danger">Get Finance offers</button> </div>
+                            <hr class="singleline">
+                            <div>Number Plate - <span class="car_color">{{ number_plate }}</span></div>
+                            <div>Registration Date - <span class="car_service">{{ registration_date }}</span></div>
+                            <div> Owner Name - <span class="car_seats">{{ owner_name }}</span></div>
+                            <div> Vehicle Type - <span class="car_transmission">{{ vehicle_class }}</span></div>
+                            <div>Fuel Type - <span class="car_engine">{{ fuel_type }}</span></div>
+                            <div> Color - <span class="car_bhp">{{ color }}</span></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
